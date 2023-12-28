@@ -36,7 +36,7 @@ function demSoDuong() {
             soDuong++;
         }
     }
-    document.getElementById("ket-qua-cau2").innerText = soDuong;
+    document.getElementById("ket-qua-cau2").innerText = `Số lượng Số dương: ${soDuong}`;
     return soDuong;
 }
 
@@ -165,7 +165,7 @@ function timSoNguyen() {
             tongSoNguyen++;
         }
     }
-    document.getElementById("ket-qua-cau9").innerText = `Tổng Số Nguyên là: ${tongSoNguyen}`;
+    document.getElementById("ket-qua-cau9").innerText = `Số lượng Số Nguyên là: ${tongSoNguyen}`;
 }
 
 
@@ -186,13 +186,13 @@ function soSanh() {
     let tongSoAm = demSoAm();
     let ketQua = "";
     if (tongSoAm == tongSoDuong) {
-        ketQua = `Tổng Số âm = Tổng Số dương`;
+        ketQua = `Số lượng Số âm = Số lượng Số dương`;
     }
     else if (tongSoAm > tongSoDuong) {
-        ketQua = `Tổng Số âm > Tổng Số dương`;
+        ketQua = `Số lượng Số âm > Số lượng Số dương`;
     }
     else {
-        ketQua = `Tổng Số âm < Tổng Số dương`;
+        ketQua = `Số lượng Số âm < Số lượng Số dương`;
     }
     document.getElementById("ket-qua-cau10").innerText = ketQua;
 

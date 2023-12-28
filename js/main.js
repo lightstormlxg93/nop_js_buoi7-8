@@ -7,7 +7,7 @@ function clearInput() {
 
 
 // Nhập số nguyên
-let chuoiSoNguyen = [5,4,3,2,1,-1];
+let chuoiSoNguyen = [];
 function themSo() {
 
     let soNguyen = document.getElementById("so-nguyen").value * 1;

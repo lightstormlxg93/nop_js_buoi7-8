@@ -7,7 +7,7 @@ function clearInput() {
 
 
 // Nhập số nguyên
-let chuoiSoNguyen = [];
+let chuoiSoNguyen = [5,4,3,2,1,-1];
 function themSo() {
 
     let soNguyen = document.getElementById("so-nguyen").value * 1;
@@ -117,7 +117,7 @@ function doiViTri() {
 // Câu 7
 
 function sapXep() {
-    let chuoiSoNguyen2 = chuoiSoNguyen
+    let chuoiSoNguyen2 = chuoiSoNguyen.slice(0);
     chuoiSoNguyen2.sort();
     chuoiSoNguyen2.splice(chuoiSoNguyen2.length - 1, 1);
 

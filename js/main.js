@@ -17,8 +17,6 @@ function themSo() {
 }
 
 
-
-
 // Câu 1
 function tinhTongSoDuong() {
     let tongSoDuong = 0;
@@ -118,11 +116,19 @@ function doiViTri() {
 
 function sapXep() {
     let chuoiSoNguyen2 = chuoiSoNguyen.slice(0);
-    chuoiSoNguyen2.sort();
-    chuoiSoNguyen2.splice(chuoiSoNguyen2.length - 1, 1);
-
+    for (i = 0; i < chuoiSoNguyen2.length - 1; i++) {
+        for (j = (i + 1); j < chuoiSoNguyen2.length; j++) {
+            if (chuoiSoNguyen2[j] < chuoiSoNguyen2[i]) {
+                let bienTam = chuoiSoNguyen2[j];
+                chuoiSoNguyen2[j] = chuoiSoNguyen2[i];
+                chuoiSoNguyen2[i] = bienTam;
+            }
+        }
+    }
     document.getElementById("ket-qua-cau7").innerText = chuoiSoNguyen2;
 }
+
+
 
 // Câu 8
 function timSoNguyenTo() {
@@ -178,21 +184,20 @@ function demSoAm() {
 function soSanh() {
     let tongSoDuong = demSoDuong();
     let tongSoAm = demSoAm();
-    let ketQua="";
-    if(tongSoAm==tongSoDuong){
-        ketQua = `Tổng Số âm = Tổng Số dương` ;
+    let ketQua = "";
+    if (tongSoAm == tongSoDuong) {
+        ketQua = `Tổng Số âm = Tổng Số dương`;
     }
-    else if(tongSoAm>tongSoDuong){
-        ketQua = `Tổng Số âm > Tổng Số dương` ;
+    else if (tongSoAm > tongSoDuong) {
+        ketQua = `Tổng Số âm > Tổng Số dương`;
     }
-    else{
-        ketQua = `Tổng Số âm < Tổng Số dương` ;
+    else {
+        ketQua = `Tổng Số âm < Tổng Số dương`;
     }
     document.getElementById("ket-qua-cau10").innerText = ketQua;
 
-
-
 }
+
 
 
 
